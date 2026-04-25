@@ -1,0 +1,21 @@
+Package: KISHOREPanditurai49006169Assignment2
+Type: Package
+Title: Assignment 2 Package
+Version: 0.1.0
+Authors@R: 
+    person("Kishore", "Panditurai", email = "kishorepandidurai@students.mq.edu.au", role = c("aut", "cre"))
+Description: R package for STAT1379 COMP6179 Assignment 2.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    tibble
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)

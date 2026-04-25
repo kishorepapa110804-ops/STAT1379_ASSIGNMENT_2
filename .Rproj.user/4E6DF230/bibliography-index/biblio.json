@@ -1,0 +1,24 @@
+{
+    "sources": [
+        {
+            "URL": "https://www.r-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "rmanual",
+            "issued": {
+                "date-parts": [
+                    [
+                        2026
+                    ]
+                ]
+            },
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": ""
+        }
+    ],
+    "project_biblios": []
+}

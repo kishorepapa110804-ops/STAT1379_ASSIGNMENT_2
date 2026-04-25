@@ -1,0 +1,6 @@
+@misc{rmanual,
+  author = {{R Core Team}},
+  title = {R: A Language and Environment for Statistical Computing},
+  year = {2026},
+  url = {https://www.r-project.org/}
+}

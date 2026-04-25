@@ -466,7 +466,7 @@ Completed tasks:
 -   Successfully passed `devtools::check()` with 0 errors, 0 warnings, 0 notes
 
 ```{r exercise5-demo, message=FALSE, warning=FALSE}
-devtools::load_all()
+devtools::load_all()git
 
 Multiserver(
   arrival_time = c(91.23, 111.79, 166.62, 308.08, 515.11, 595.98),

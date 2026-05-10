@@ -1,8 +1,0 @@
-#' Simulate queue system
-#'
-#' @param arrival_time Numeric vector of customer arrivals
-#' @param service_time Numeric vector of service durations
-#' @param servers Number of servers
-#' @return Tibble of queue results
-#' @export
-Multiserver <- function(arrival_time, service_time, servers = 3){

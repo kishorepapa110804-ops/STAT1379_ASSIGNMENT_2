@@ -33,10 +33,12 @@ R is widely used for statistical computing [@rmanual].
 
 # Exercise 1
 
-```{r}
+```{r, message=FALSE, warning=FALSE, fig.width=7, fig.height=5}
+
 library(tidyverse)
 library(here)
 library(ggrepel)
+
 
 ```
 
@@ -102,13 +104,9 @@ ggplot(plot2_data, aes(x = diff, y = country, colour = `diff > 0`)) +
   )
 ```
 
-plot1_data \<- pisa %\>% group_by(country) %\>% summarise( mean_math = mean(math, na.rm = TRUE), mean_read = mean(read, na.rm = TRUE) )
+Plot 1 shows a strong positive relationship between mathematics and reading scores across countries. Countries with higher mathematics scores generally also achieve higher reading scores.
 
-ggplot(plot1_data, aes(mean_math, mean_read)) + geom_point() + geom_label_repel(aes(label = country)) + labs( title = "Average reading against average maths for each country", subtitle = "Any guesses on where Australia ranks?", x = "mean scores in mathematics", y install.packages("ggrepel")= "mean scores in reading" )
-
-Plot 1 shows strong positive relationship between maths and reading scores.
-
-Plot 2 shows females outperform males in reading across nearly all countries.
+Plot 2 shows that female students generally outperform male students in reading across most countries, while differences in mathematics and science vary between countries.
 
 # Exercise 2
 
@@ -190,10 +188,9 @@ x = NULL,
 y = "A$ ('000)",
 caption = "Shaded areas indicate GDP increased less than 0.1% at that quarter.\nSources: ABS."
 ) +
-
 theme_minimal()
 
-caption = "Shaded areas indicate GDP increased less than 0.1% at that quarter.\nSources: ABS."
+
 ```
 
 Plot 1 shows that Melbourne median established house transfer prices increased strongly over time, especially after 2015, with a clear peak around 2021–2022.
@@ -274,7 +271,9 @@ The second query asks which actors have worked with the largest number of differ
 
 # Exercise 4
 
-```{r}
+This report is written as a High Distinction level attempt because it includes Pearson’s chi-squared test, Fisher’s exact test, and a simulation study comparing rejection rates across four settings.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 # Exercise 4
 
@@ -332,13 +331,9 @@ The Fisher’s exact test also gives a very small p-value. Therefore, we again r
 
 ### Comparison of the Two Tests
 
--   The chi-squared test uses an approximation and performs best for larger samples.
-
-<!-- -->
-
--   Fisher’s exact test calculates the exact probability and is more suitable for small samples.
-
--   In this example, both tests lead to the same conclusion.
+-   The chi-squared test uses an approximation and performs best for larger samples [@agresti2018].
+-   Fisher’s exact test calculates exact probabilities and is more suitable for small samples [@fisher1922].
+-   The analysis was performed using R [@R-base] and dplyr [@dplyr].
 
 ### Simulation Study
 
